@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Path:</strong>
+  <%= @mock.path %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @mock.status %>
+</p>
+
+<p>
+  <strong>Method:</strong>
+  <%= @mock.method %>
+</p>
+
+<p>
+  <strong>Response readers:</strong>
+  <%= @mock.headers %>
+</p>
+
+<p>
+  <strong>Response data_type:</strong>
+  <%= @mock.data_type %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @mock.body %>
+</p>
+
+<%= link_to 'Edit', edit_mock_path(@mock) %> |
+<%= link_to 'Back', mocks_path %>

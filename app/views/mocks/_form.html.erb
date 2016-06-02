@@ -1,0 +1,41 @@
+<%= form_for(@mock) do |f| %>
+  <% if @mock.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mock.errors.count, "error") %> prohibited this mock from being saved:</h2>
+
+      <ul>
+      <% @mock.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :path %><br>
+    <%= f.text_field :path %>
+  </div>
+  <div class="field">
+    <%= f.label :status %><br>
+    <%= f.number_field :status %>
+  </div>
+  <div class="field">
+    <%= f.label :method %><br>
+    <%= f.text_field :method %>
+  </div>
+  <div class="field">
+    <%= f.label :headers %><br>
+    <%= f.text_area :headers %>
+  </div>
+  <div class="field">
+    <%= f.label :data_type %><br>
+    <%= select_tag "data_type", options_for_select([ "json", "text", 'xml', 'html' ], "json") %>
+  </div>
+  <div class="field">
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

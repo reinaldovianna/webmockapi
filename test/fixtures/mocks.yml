@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  path: MyString
+  status: 1
+  method: MyString
+  request_headers: MyText
+  response_readers: MyText
+  body: MyText
+
+two:
+  path: MyString
+  status: 1
+  method: MyString
+  request_headers: MyText
+  response_readers: MyText
+  body: MyText
