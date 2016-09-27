@@ -85,6 +85,6 @@ class MocksController < ApplicationController
     end
 
     def set_mock_by_path
-      @mock = Mock.find_by(path: "/#{params['path']}", method: request.method.to_s.downcase)
+      @mock = Mock.find_by(path: "#{request.fullpath}", method: request.method.to_s.downcase)
     end
 end
